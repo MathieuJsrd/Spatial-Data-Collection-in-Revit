@@ -1,8 +1,6 @@
 # Spatial-Data-Collection-in-Revit
 
-You can create your own Revit application following this tuto
-
-Set Up your Project for Revit :
+You can create your own Revit application following this tuto :
 
 Part 1 : https://archi-lab.net/building-revit-plug-ins-with-visual-studio-part-one/
 
