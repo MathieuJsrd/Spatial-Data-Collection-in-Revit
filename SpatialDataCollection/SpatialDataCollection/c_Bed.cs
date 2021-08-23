@@ -69,6 +69,8 @@ namespace SpatialDataCollection
                     return hostRoom;
 
                 // Third Test : Shift according Facing Vector
+                // Facing Vector is a 3D vector indicating the orientation of the equipment. 
+                // With this, it can be shifted towards the interior of the room if it is too extreme at the room's borders
                 XYZ shiftToGoInSpace = fi.FacingOrientation;
 
                 XYZ locRoom1 = new XYZ(
@@ -79,7 +81,8 @@ namespace SpatialDataCollection
                     fiLoc.X + (shiftToGoInSpace.X * CONSTANT),
                     fiLoc.Y + (shiftToGoInSpace.Y * CONSTANT), // multiplied by CONSTANT so that the shift is sufficient to catch the Room but not too large either
                     fiLoc.Z); // No shift for Z axis (2D geometry)
-
+                
+                // -- New search with new locs
                 Room room1 = c_Global.Doc.GetRoomAtPoint(locRoom1, c_Global.Phase);
                 Room room2 = c_Global.Doc.GetRoomAtPoint(locRoom2, c_Global.Phase);
 
